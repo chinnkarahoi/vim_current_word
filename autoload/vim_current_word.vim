@@ -18,7 +18,6 @@ endfunction
 " Schedule highlight or do it instantly
 function! vim_current_word#pre_highlight()
   if g:vim_current_word#highlight_delay
-    " call vim_current_word#clear_current_word_matches()
     call vim_current_word#schedule_highlight()
   else
     call vim_current_word#highlight_word_under_cursor()
