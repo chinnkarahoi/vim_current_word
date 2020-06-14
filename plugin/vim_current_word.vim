@@ -9,7 +9,7 @@ let g:vim_current_word#highlight_delay = get(g:, 'vim_current_word#highlight_del
 
 augroup vim_current_word
   autocmd!
-  autocmd CursorMoved * call vim_current_word#pre_highlight()
+  autocmd CursorHold * call vim_current_word#pre_highlight()
   autocmd InsertEnter * call vim_current_word#handle_insert_enter()
   autocmd InsertLeave * call vim_current_word#handle_insert_leave()
   if g:vim_current_word#highlight_only_in_focused_window
